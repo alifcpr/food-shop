@@ -1,11 +1,10 @@
-import Apple from "@/components/icons/Apple";
-import Header from "@/components/modules/Header";
 import React from "react";
+import HomePage from "@/components/templates/HomePage";
 
 function Home() {
   return (
     <div>
-      Content
+      <HomePage /> 
     </div>
   );
 }
