@@ -2,16 +2,19 @@ import React from "react";
 import Location from "@/components/icons/Location";
 import Dollar from "@/components/icons/Dollar";
 import Link from "next/link";
+import Image from "next/image";
 
 const Cart = (props) => {
   const { id, name, price, details, discount } = props;
   return (
     <div className="col-span-12 bg-white p-2 shadow-2xl rounded-lg md:col-span-6 xl:col-span-4">
       <div>
-        <img
+        <Image
           src={`/images/${id}.jpeg`}
           className="w-full aspect-square object-cover object-center rounded-lg"
           alt={name}
+          width={400}
+          height={200}
         />
       </div>
       <div className="flex items-center justify-between mt-2">
