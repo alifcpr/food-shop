@@ -7,7 +7,7 @@ const Guid = () => {
       <Link href={"/menu"} className=" shadow-2xl rounded-md px-8 py-2  font-semibold text-lg xl:text-xl">
         Menu
       </Link>
-      <Link href={"/category"} className=" shadow-2xl rounded-md px-8 py-2  font-semibold text-lg xl:text-xl">
+      <Link href={"/category1"} className=" shadow-2xl rounded-md px-8 py-2  font-semibold text-lg xl:text-xl">
         Categories
       </Link>
       <div className=" shadow-2xl rounded-md px-8 py-2  font-semibold text-lg xl:text-xl">
