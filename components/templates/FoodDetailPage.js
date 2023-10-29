@@ -8,7 +8,7 @@ const FoodDetailPage = ({ data }) => {
   return (
     <div className="mt-10 flex flex-col gap-y-10">
       <div className="flex flex-col items-center gap-y-3 xl:flex-row xl:gap-x-5">
-        <div className="rounded-lg overflow-hidden">
+        <div className="rounded-lg overflow-hidden relative">
           <Image
             src={`/images/${id}.jpeg`}
             className=" aspect-video object-cover object-center"
@@ -16,6 +16,9 @@ const FoodDetailPage = ({ data }) => {
             height={400}
             alt={name}
           />
+          {discount ? (
+            <div className="absolute top-2 left-2 px-5 py-1 bg-red-500 border-2 rounded-md text-white">{discount} %</div>
+          ) : (null)}
         </div>
         <div className="flex flex-col gap-y-4 items-center xl:items-start">
           <h1 className="text-lime-500 font-semibold text-lg md:text-2xl xl:text-4xl">
@@ -28,7 +31,13 @@ const FoodDetailPage = ({ data }) => {
             </div>
             <h1 className="flex items-center gap-x-1 text-md md:text-lg xl:text-2xl">
               <Dollar />
-              <span>{price} $</span>
+              {discount ? (
+                <span className="text-red-500">
+                  {(price * discount) / 100} $
+                </span>
+              ) : (
+                <span className="text-black">{price} $</span>
+              )}
             </h1>
           </div>
         </div>
@@ -111,7 +120,9 @@ const FoodDetailPage = ({ data }) => {
           ))}
         </ol>
       </div>
-      <button className="bg-green-500 p-2 rounded-lg text-white md:text-lg">Add To Cart</button>
+      <button className="bg-green-500 p-2 rounded-lg text-white md:text-lg">
+        Add To Cart
+      </button>
     </div>
   );
 };

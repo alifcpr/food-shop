@@ -8,7 +8,7 @@ const Cart = (props) => {
   const { id, name, price, details, discount } = props;
   return (
     <div className="col-span-12 bg-white p-2 shadow-2xl rounded-lg md:col-span-6 xl:col-span-4">
-      <div>
+      <div className="relative">
         <Image
           src={`/images/${id}.jpeg`}
           className="w-full aspect-square object-cover object-center rounded-lg"
@@ -16,6 +16,7 @@ const Cart = (props) => {
           width={400}
           height={200}
         />
+        {discount ? <div className="absolute top-2 left-2 text-white bg-red-500 border-2 px-5 rounded-md">{discount} %</div> : null}
       </div>
       <div className="flex items-center justify-between mt-2">
         <h1 className="text-green-500 font-semibold text-lg md:text-xl xl:text-2xl">{name}</h1>
