@@ -103,8 +103,8 @@ const FoodDetailPage = ({ data }) => {
           Ingredients
         </h1>
         <ul className="list-disc list-inside mt-5">
-          {ingredients.map((item) => (
-            <li className="text-base md:text-lg">{item}</li>
+          {ingredients.map((item , index) => (
+            <li key={index} className="text-base md:text-lg">{item}</li>
           ))}
         </ul>
       </div>
@@ -113,8 +113,8 @@ const FoodDetailPage = ({ data }) => {
           Recipe
         </h1>
         <ol className=" list-decimal list-inside mt-6">
-          {recipe.map((item) => (
-            <li className=" even:bg-lime-200 odd:bg-green-400 p-5 font-semibold md:text-lg">
+          {recipe.map((item , index) => (
+            <li key={index} className=" even:bg-lime-200 odd:bg-green-400 p-5 font-semibold md:text-lg">
               {item}
             </li>
           ))}

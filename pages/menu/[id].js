@@ -11,7 +11,7 @@ const FoodDetail = ({ data }) => {
 };
 
 const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:9000/data");
+  const res = await fetch("https://api-food-eta.vercel.app/data");
   const json = await res.json();
   const data = json.slice(0, 10);
 
@@ -25,7 +25,7 @@ const getStaticPaths = async () => {
 
 const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:9000/data/${params.id}`);
+  const res = await fetch(`https://api-food-eta.vercel.app/data/${params.id}`);
   const data = await res.json();
 
   if (!data.id) {

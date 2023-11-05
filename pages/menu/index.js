@@ -10,7 +10,7 @@ const Menu = ({ data }) => {
 };
 
 const getStaticProps = async () => {
-  const res = await fetch("http://localhost:9000/data");
+  const res = await fetch("https://api-food-eta.vercel.app/data");
   const data = await res.json();
 
   return {
