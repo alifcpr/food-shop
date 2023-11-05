@@ -7,7 +7,7 @@ const Definition = () => {
         Who We Are
       </h1>
       <p className="text-justify font-semibold text-sm md:text-md xl:text-xl">
-        BotoFood company was founded in 2009 by Grrett Camp and Travis Kalanick.
+        Food Shop company was founded in 2009 by Grrett Camp and Travis Kalanick.
         The company began food delivery in August 2014 with the launch of the
         UberFRESH service in Santa Monica, California. In 2015, the platform was
         renamed to UberEATS and the ordering software was released as its own
